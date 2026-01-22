@@ -6,7 +6,7 @@
   <title>Patternity</title>
   <meta
     name="description"
-    content="Patternity is a research organization focused on protocol design for behavioral consensus systems. Proof-of-Game (PoG) is its first published protocol."
+    content="Patternity is a research organization building protocol-level systems for signals in interactive media. GhostSignal embeds structured data directly into video/audio streams. Proof-of-Game (PoG) is a behavioral consensus protocol."
   />
   <style>
     body {
@@ -20,14 +20,21 @@
     }
 
     .container {
-      max-width: 720px;
+      max-width: 820px;
       padding: 64px 24px;
       margin: 0 auto;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.6rem;
+      margin: 0 0 0.25rem;
+      letter-spacing: 0.2px;
+    }
+
+    .tagline {
+      margin: 0 0 1.25rem;
+      color: #b7b7c2;
+      font-size: 1.05rem;
     }
 
     h2 {
@@ -42,6 +49,7 @@
 
     ul {
       padding-left: 1.2rem;
+      margin: 0.5rem 0 1rem;
     }
 
     a {
@@ -53,74 +61,174 @@
       text-decoration: underline;
     }
 
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 1.25rem;
+    }
+
+    .card {
+      border: 1px solid #2a2a33;
+      background: #141418;
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 0.35rem 0 0.75rem;
+      color: #c9c9d2;
+    }
+
     .status {
-      margin-top: 2rem;
+      margin-top: 1rem;
       padding: 1rem;
       border: 1px solid #2a2a33;
       background: #141418;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border: 1px solid #2a2a33;
+      background: #101015;
+      color: #c9c9d2;
+      border-radius: 999px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 0.75rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 12px;
+      border: 1px solid #2a2a33;
+      background: #101015;
+      border-radius: 8px;
+      color: #e6e6eb;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      border-color: #3b3b47;
+      background: #12121a;
     }
 
     footer {
       margin-top: 4rem;
       font-size: 0.9rem;
       color: #9a9aa3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .muted {
+      color: #b7b7c2;
     }
   </style>
 </head>
 <body>
   <main class="container">
     <h1>Patternity</h1>
+    <p class="tagline">Protocol-level systems for signals in interactive media.</p>
 
     <p>
-      Patternity is a research organization focused on the design of
-      protocol-level systems for behavioral consensus and off-chain verification.
+      Patternity is a research organization focused on building protocol-level primitives
+      for extracting, transporting, and verifying signals produced by interactive systems and media.
     </p>
 
-    <h2>Proof-of-Game (PoG)</h2>
+    <div class="grid">
+      <section class="card">
+        <h3>GhostSignal <span class="pill">New</span></h3>
+        <p>
+          A protocol for embedding and extracting structured data directly from media streams
+          such as video (and later audio).
+        </p>
+        <p class="muted">
+          Use cases: referral and advertising links carried by the content, coupons/claims bound to an intact media artifact,
+          privacy-first attribution, and platform-independent conversion triggers.
+        </p>
+        <div class="status">
+          <p><strong>Status:</strong> GhostSignal v0 — Draft</p>
+          <p><strong>Demo:</strong> Transport-layer prototype available (browser-based)</p>
+          <div class="actions">
+            <a class="btn" href="https://github.com/Patternity/ghost-signal" target="_blank" rel="noopener noreferrer">
+              GhostSignal Specification
+            </a>
+            <a class="btn" href="https://github.com/Patternity/ghost-signal-demo" target="_blank" rel="noopener noreferrer">
+              GhostSignal Demo Repo
+            </a>
+            <a class="btn" href="https://patternity.github.io/ghost-signal-demo/" target="_blank" rel="noopener noreferrer">
+              Open Live Demo
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <p>
-      Proof-of-Game (PoG) is a consensus protocol for proving the
-      <strong>uniqueness of behavioral processes</strong>.
-    </p>
-
-    <p>PoG does not prove:</p>
-    <ul>
-      <li>human identity</li>
-      <li>resistance to automation or AI</li>
-      <li>skill, performance, or outcomes</li>
-      <li>economic value or incentives</li>
-    </ul>
-
-    <div class="status">
-      <p><strong>Status:</strong> PoG v1.0 — Draft (consensus-complete)</p>
-      <p><strong>Implementation:</strong> Uniqueness Engine (UE) not yet published</p>
+      <section class="card">
+        <h3>Proof-of-Game (PoG)</h3>
+        <p>
+          Proof-of-Game (PoG) is a consensus protocol for proving the
+          <strong>uniqueness of behavioral processes</strong>.
+        </p>
+        <p class="muted">PoG does not attempt to prove identity, resistance to automation, skill, or outcomes.</p>
+        <div class="status">
+          <p><strong>Status:</strong> PoG v1.0 — Draft (consensus-complete)</p>
+          <p><strong>Implementation:</strong> Uniqueness Engine (UE) not yet published</p>
+          <div class="actions">
+            <a class="btn" href="https://github.com/Patternity/proof-of-game" target="_blank" rel="noopener noreferrer">
+              PoG Specification
+            </a>
+            <a class="btn" href="https://github.com/Patternity/proof-of-game/releases/tag/v1.0-draft" target="_blank" rel="noopener noreferrer">
+              PoG v1.0 Draft Release
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
 
     <h2>Resources</h2>
-
     <ul>
       <li>
-        <a
-          href="https://github.com/Patternity/proof-of-game"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/Patternity/ghost-signal" target="_blank" rel="noopener noreferrer">
+          GhostSignal Specification (GitHub)
+        </a>
+      </li>
+      <li>
+        <a href="https://patternity.github.io/ghost-signal-demo/" target="_blank" rel="noopener noreferrer">
+          GhostSignal Live Demo (GitHub Pages)
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Patternity/proof-of-game" target="_blank" rel="noopener noreferrer">
           Proof-of-Game Specification (GitHub)
         </a>
       </li>
       <li>
-        <a
-          href="https://github.com/Patternity/proof-of-game/releases/tag/v1.0-draft"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/Patternity/proof-of-game/releases/tag/v1.0-draft" target="_blank" rel="noopener noreferrer">
           PoG v1.0 Draft Release
         </a>
       </li>
     </ul>
 
     <footer>
-      © Patternity
+      <span>© Patternity</span>
+      <span class="muted">Contact: <a href="mailto:hello@patternity.org">hello@patternity.org</a></span>
     </footer>
   </main>
 </body>
