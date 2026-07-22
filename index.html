@@ -6,7 +6,7 @@
   <title>Patternity</title>
   <meta
     name="description"
-    content="Patternity is a research organization building protocol-level systems for signals in interactive media. GhostSignal embeds structured data directly into video/audio streams. Proof-of-Game (PoG) is a behavioral consensus protocol."
+    content="Patternity is a research organization building protocol-level systems for signals in interactive media. GhostSignal embeds structured data directly into video/audio streams. Proof-of-Game (PoG) is a behavioral consensus protocol. NDK derives deterministic keys from named contexts via SLIP-0021."
   />
   <style>
     body {
@@ -206,6 +206,32 @@
           </div>
         </div>
       </section>
+      <section class="card">
+        <h3>NDK — Named Deterministic Keys <span class="pill">New</span></h3>
+        <p>
+          A convention for deriving a deterministic 32-byte seed from a master secret and a
+          small, human-readable JSON descriptor, using SLIP-0021 without modification.
+        </p>
+        <p class="muted">
+          Use cases: donation wallets, release-signing identities, SSH keys, and symmetric
+          application secrets — each recoverable from one master secret plus a public descriptor.
+        </p>
+        <div class="status">
+          <p><strong>Status:</strong> NDK-1 — Draft</p>
+          <p><strong>Implementation:</strong> TypeScript reference implementation in progress</p>
+          <div class="actions">
+            <a class="btn" href="https://github.com/Patternity/ndk" target="_blank" rel="noopener noreferrer">
+              NDK Specification
+            </a>
+            <a class="btn" href="https://github.com/Patternity/ndk/blob/master/SPEC.md" target="_blank" rel="noopener noreferrer">
+              NDK-1 Core Spec
+            </a>
+            <a class="btn" href="https://github.com/Patternity/ndk/blob/master/SPEC-PROFILES.md" target="_blank" rel="noopener noreferrer">
+              NDK Profiles
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
 
     <h2>Resources</h2>
@@ -228,6 +254,11 @@
       <li>
         <a href="https://github.com/Patternity/proof-of-game/releases/tag/v1.0-draft" target="_blank" rel="noopener noreferrer">
           PoG v1.0 Draft Release
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Patternity/ndk" target="_blank" rel="noopener noreferrer">
+          NDK — Named Deterministic Keys Specification (GitHub)
         </a>
       </li>
     </ul>
